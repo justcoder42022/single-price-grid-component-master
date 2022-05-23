@@ -1,0 +1,164 @@
+:root {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: left;
+    background-color: var(--Light-Gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+
+
+}
+
+main {
+    border-radius: .7rem;
+    overflow: hidden;
+
+
+}
+
+header,
+section {
+    padding: 1rem;
+    background-color: white;
+
+}
+
+header {
+    grid-area: header;
+}
+
+li {
+    list-style: none;
+}
+
+header h1 {
+    margin: 1rem 0;
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 1.44rem;
+
+
+}
+
+header h2 {
+    color: var(--Bright-Yellow);
+    max-width: 30ch;
+    margin: 1rem 0;
+    font-size: 1.08rem;
+}
+
+header p {
+    color: var(--Grayish-Blue);
+    max-width: 33ch;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.sign-up-section {
+    background-color: var(--Cyan);
+    color: var(--Light-Gray);
+    grid-area: sign-up-section;
+}
+
+.sign-up-section h2 {
+    font-size: 1.08rem;
+    margin: 1rem 0;
+}
+
+.sign-up-section p {
+    margin: 1rem 0;
+}
+
+.price-p {
+    color: rgb(138, 226, 231);
+}
+
+.price-p span {
+    font-weight: bolder;
+    padding-right: .2rem;
+    font-size: 1.4rem;
+    color: var(--Light-Gray);
+}
+
+.sign-up-section a {
+    text-decoration: none;
+    display: block;
+    background-color: var(--Bright-Yellow);
+    color: white;
+    text-align: center;
+    margin: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    margin-left: 0;
+    border-radius: .5rem;
+}
+
+.why-us-section {
+    background-color: hsla(179, 62%, 43%, .8);
+    color: var(--Light-Gray);
+    line-height: 1.5;
+    font-size: 1rem;
+    grid-area: why-us-section;
+}
+
+.why-us-section h2 {
+    margin: 1rem 0;
+    font-size: 1.08rem;
+}
+
+@media (min-width:600px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "header                   header"
+            "sign-up-section  why-us-section";
+    }
+
+    header {
+        padding-bottom: 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        max-width: unset;
+    }
+
+    header p {
+        max-width: 60ch;
+    }
+
+    section {
+        padding: 2rem;
+
+    }
+
+    .sign-up-section a {
+
+        margin: 0;
+        margin-top: 2rem;
+        padding: 1rem;
+        margin-left: 0;
+        border-radius: .5rem;
+    }
+
+}
